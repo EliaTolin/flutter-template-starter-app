@@ -1,0 +1,3 @@
+class AppSettingsConstants {
+  // App Settings
+}
