@@ -1,9 +1,10 @@
 import 'dart:developer';
 import 'package:dio/dio.dart';
-import 'package:starterapp/constants/apis/api_route_constants.dart';
-import 'package:starterapp/exceptions/api_exceptions.dart';
+import 'package:starterapp/constants/repository_constants/api_constants/routes/api_route_constants.dart';
+import 'package:starterapp/exceptions/api/api_exceptions.dart';
+import 'package:starterapp/exceptions/auth/auth_exception.dart';
 import 'package:starterapp/helper/api/api_route_helper.dart';
-import 'package:starterapp/helper/api/jwt_token_helper.dart';
+import 'package:starterapp/helper/auth/jwt_token_helper.dart';
 
 class ApiBaseCore {
   late Dio baseAPI;
@@ -56,7 +57,7 @@ class ApiBaseCore {
         }
         Dio dio = Dio();
         Response<dynamic> response = await dio.post(
-          ApiPathConstants.refreshTokenPath,
+          ApiRouteConstants.refreshTokenPath,
           data: {
             "refresh": await jwtTokenHelper.getRefreshToken(),
           },
@@ -80,6 +81,7 @@ class ApiBaseCore {
     log("Headers: ${options.headers}");
     log("Data: ${options.data}");
     log("QueryParams: ${options.queryParameters}");
+    log("____________________");
     handler.next(options);
   }
 

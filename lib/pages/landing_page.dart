@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:starterapp/constants/ui/style_constants.dart';
+import 'package:starterapp/constants/style/style_constants.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LandingPage extends StatelessWidget {

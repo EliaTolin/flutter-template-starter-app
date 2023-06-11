@@ -7,7 +7,7 @@ import 'package:starterapp/routes/routes_constants.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
-    case RoutesConstants.splashScreen:
+    case RoutesConstants.splashScreenRoute:
       return MaterialPageRoute(
         settings: settings,
         builder: (context) => const SplashPage(),

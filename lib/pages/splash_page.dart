@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:provider/provider.dart';
-import 'package:starterapp/constants/ui/style_constants.dart';
+import 'package:starterapp/constants/style/style_constants.dart';
 import 'package:starterapp/routes/routes_constants.dart';
-import 'package:starterapp/services/locale_service.dart';
+import 'package:starterapp/services/locale_service_provider.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
   Future<void> loadCall() async {
     // Wait delay
     if (context.mounted) {
-      await context.read<LocaleProvider>().initLocale(context);
+      await context.read<LocaleServiceProvider>().initLocale(context);
     }
     await Future.delayed(const Duration(seconds: 3), () {});
     redirectPage();

@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class ApiPathConstants {
+class ApiRouteConstants {
   static String getBaseUrl() {
     if (kDebugMode) {
       return "https://route.it";

@@ -1,8 +1,8 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
-class SharedPrefHelper {
-  SharedPrefHelper();
+class LocalStorageCore {
+  LocalStorageCore();
 
   Future<dynamic> read(String key) async {
     final prefs = await SharedPreferences.getInstance();

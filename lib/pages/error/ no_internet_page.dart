@@ -37,7 +37,7 @@ class NoInternetPage extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.of(context)
-                    .popAndPushNamed(RoutesConstants.splashScreen);
+                    .popAndPushNamed(RoutesConstants.splashScreenRoute);
               },
             ),
           ],

@@ -1,7 +1,6 @@
-
-import 'package:starterapp/constants/apis/api_route_constants.dart';
+import 'package:starterapp/constants/repository_constants/api_constants/routes/api_route_constants.dart';
 
 class ApiRouteHelper {
   static String getBaseUrl() =>
-      "${ApiPathConstants.getBaseUrl()}${ApiPathConstants.basePath}/";
+      "${ApiRouteConstants.getBaseUrl()}${ApiRouteConstants.basePath}/";
 }

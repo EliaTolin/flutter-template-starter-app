@@ -1,4 +1,5 @@
 class LanguageLocalHelper {
+  // Add other languages here
   static final Map<String, Map<String, String>> isoLangs = {
     "fr": {"name": "French", "nativeName": "Français"},
     "it": {"name": "Italian", "nativeName": "Italiano"},
