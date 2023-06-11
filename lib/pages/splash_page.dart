@@ -6,14 +6,14 @@ import 'package:starterapp/constants/ui/style_constants.dart';
 import 'package:starterapp/routes/routes_constants.dart';
 import 'package:starterapp/services/locale_service.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashPageState extends State<SplashPage> {
   Future<void> loadCall() async {
     // Wait delay
     if (context.mounted) {
