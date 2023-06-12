@@ -20,15 +20,16 @@ class JwtTokenHelper {
 
   Future<bool> isValidAccessToken() async {
     if (!await existJwtToken()) {
-      await clearJwtTokens();
       return false;
     }
     try {
       String token = await getAccessToken();
       _verifyToken(token);
     } on JWTExpiredException {
+      await clearJwtTokens();
       return false;
     } on JWTException {
+      await clearJwtTokens();
       return false;
     }
     return true;
