@@ -1,3 +1,4 @@
+![Flutter Starter App](https://github.com/EliaTolin/flutter-template-starter-app/assets/60351315/df279758-867d-4265-a3fc-d637e5305819)
 
 ## Description
 
