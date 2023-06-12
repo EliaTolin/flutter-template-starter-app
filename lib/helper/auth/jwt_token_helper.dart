@@ -20,6 +20,7 @@ class JwtTokenHelper {
 
   Future<bool> isValidAccessToken() async {
     if (!await existJwtToken()) {
+      await clearJwtTokens();
       return false;
     }
     try {
