@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:starterapp/pages/error/%20no_internet_page.dart';
+import 'package:starterapp/pages/error/no_internet_page.dart';
 import 'package:starterapp/pages/landing_page.dart';
 import 'package:starterapp/pages/splash_page.dart';
 import 'package:starterapp/pages/undefinited_page.dart';

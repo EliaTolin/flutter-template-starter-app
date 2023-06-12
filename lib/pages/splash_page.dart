@@ -17,7 +17,9 @@ class _SplashPageState extends State<SplashPage> {
   Future<void> loadCall() async {
     // Wait delay
     if (context.mounted) {
-      await context.read<LocaleServiceProvider>().initLocale(context);
+      await context
+          .read<LocaleServiceProvider>()
+          .initLocale(Localizations.localeOf(context).languageCode);
     }
     await Future.delayed(const Duration(seconds: 3), () {});
     redirectPage();

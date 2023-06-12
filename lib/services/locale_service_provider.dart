@@ -7,7 +7,7 @@ class LocaleServiceProvider with ChangeNotifier {
   Locale? get locale => _locale;
   PreferenceLocalStorage preferenceLocalStorage = PreferenceLocalStorage();
 
-  Future<void> initLocale(context) async {
+  Future<void> initLocale(String languageCode) async {
     if (await preferenceLocalStorage.isSetLanguagePreferences()) {
       String languageCode =
           await preferenceLocalStorage.getLanguagePreferences();
@@ -16,7 +16,7 @@ class LocaleServiceProvider with ChangeNotifier {
       }
       return;
     }
-    _locale = Locale(Localizations.localeOf(context).languageCode);
+    _locale = Locale(languageCode);
   }
 
   void setLocale(Locale loc) async {

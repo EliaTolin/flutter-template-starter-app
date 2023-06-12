@@ -14,9 +14,9 @@ class JwtTokenHelper {
     await jwtLocalStorage.saveRefreshToken(refreshToken);
   }
 
-  Future<dynamic> getAccessToken() => jwtLocalStorage.getAccessToken();
+  Future<String> getAccessToken() => jwtLocalStorage.getAccessToken();
 
-  Future<dynamic> getRefreshToken() => jwtLocalStorage.getRefreshToken();
+  Future<String> getRefreshToken() => jwtLocalStorage.getRefreshToken();
 
   Future<bool> isValidAccessToken() async {
     if (!await existJwtToken()) {
