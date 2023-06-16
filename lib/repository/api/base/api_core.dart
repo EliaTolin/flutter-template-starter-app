@@ -55,7 +55,7 @@ class ApiBaseCore {
         if (!await jwtTokenHelper.isValidRefreshToken()) {
           throw const RefreshTokenExpiredException();
         }
-        Dio dio = Dio();
+        Dio dio = Dio(opts);
         Response<dynamic> response = await dio.post(
           ApiRouteConstants.refreshTokenPath,
           data: {
