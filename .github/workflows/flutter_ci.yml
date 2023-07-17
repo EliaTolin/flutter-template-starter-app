@@ -2,54 +2,53 @@ name: Flutter CI
 
 on:
   pull_request:
-    branches: [ "master" ]
-    
-jobs:
+    branches: ["main"]
 
+jobs:
   build-android:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
+
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
-          distribution: 'zulu'
-          java-version: '11'
-      
+          distribution: "zulu"
+          java-version: "11"
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: "stable"
           cache: true
-      
+
       - name: Install dependencies
         run: flutter pub get
-      
+
       - name: Build APK
         run: flutter build apk
-      
+
       - name: Build App Bundle
         run: flutter build appbundle
 
   build-ios:
     runs-on: macos-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: "stable"
           cache: true
           architecture: x64
-      
+
       - name: Install dependencies
         run: flutter pub get
-      
+
       - name: Build iOS
         run: flutter build ios --release --no-codesign
