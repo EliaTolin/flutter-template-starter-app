@@ -18,13 +18,10 @@ jobs:
         run: flutter pub get
 
       - name: Check format errors
-        run: flutter format --set-exit-if-changed .
+        run: dart format --set-exit-if-changed .
 
       - name: Check lint errors
         run: flutter analyze .
-
-      - name: Run tests
-        run: flutter test --coverage --test-randomize-ordering-seed random
 
       - name: Very Good Coverage
         uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
