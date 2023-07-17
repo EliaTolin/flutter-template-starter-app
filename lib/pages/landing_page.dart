@@ -17,9 +17,10 @@ class LandingPage extends StatelessWidget {
         title: const Text(
           "StarterApp",
           style: TextStyle(
-              fontSize: 40,
-              color: StyleConstants.colorTitle,
-              fontWeight: FontWeight.bold),
+            fontSize: 40,
+            color: StyleConstants.colorTitle,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       body: Center(
