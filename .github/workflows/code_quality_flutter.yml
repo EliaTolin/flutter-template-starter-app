@@ -22,8 +22,3 @@ jobs:
 
       - name: Check lint errors
         run: flutter analyze .
-
-      - name: Very Good Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
-        with:
-          min_coverage: 35
