@@ -15,7 +15,9 @@ void main() async {
     MultiProvider(
       providers: [
         //Add here the providers
-        ChangeNotifierProvider(create: (context) => LocaleServiceProvider()),
+        ChangeNotifierProvider(
+          create: (context) => LocaleServiceProvider(),
+        ),
       ],
       child: const StarterApp(),
     ),
